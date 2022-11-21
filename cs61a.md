@@ -25,13 +25,13 @@ words = {
 something
 ```
 
-a key in the dictionary can't be a list or dictionary or any mutable object, and they have to be distinct, but the value can be any type
+a key in the dictionary can't be a list or dictionary or any mutable other object, and they have to be distinct, but the value can be any type
 
 immutable types: int, float, string, tuple
 
 mutable types: list, dict
 
-An immutable sequence may still be changaable if it contains a mutable value as an element.
+An immutable sequence may still be changable if it contains a mutable value as an element.
 
 the scope rules of python:
 ![the scope rules of python](https://raw.githubusercontent.com/shelinfff/picpool/main/python_scope_rules.png)

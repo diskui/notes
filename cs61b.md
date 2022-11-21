@@ -1,5 +1,5 @@
 
-java varible type can be never changed
+java's varible type can be never changed
 
 in java, types are verified **before** the code run, if there are type issue, code will not be compiled
 
@@ -7,7 +7,7 @@ all functions in java are methods, which must be in a class.
 
 don't do all the things within a function, which will make debuging more difficult.
 
-the `static` notation before the inner nested classes will make it can't access the function and varibles outside it.
+the `static` notation before the inner nested classes will make it can't access the function and varibles outside of it.
 
 invariants: a condition that is guaranteed to be true during the code execution, uaually used to avoid special cases and to reason the code better.
 
@@ -38,7 +38,7 @@ matrix = new int[4][3];
 it's not allowed to create a array of unknown type in java, so we should create an array of `Object` and then cast it.
 
 test-driven development:
-write test before and run the test, it will be red(wrong), and write the implementation until it turns green, then refactor it to be faster.
+write test before and run the test, it will be red (wrong), and write the implementation until it turns green, then refactor it to be faster.
 
 Every variable in java has a compile-time type(static type), which is specified at declaration and can be never changed, and a run-time type(dynamic type), which is specified at instantiation.
 

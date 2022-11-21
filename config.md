@@ -1,4 +1,4 @@
-softwares that I will install just after the installation:
+softwares that I will install just after the installation of the system:
 
 to enable `neovim`  to copy to system clipboard, install `wl-clipboard`
 
