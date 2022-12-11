@@ -30,5 +30,3 @@ plugins=(
 
 
 `chrome` 离线扩展：medium解锁
-
-`fcitx5` and `rime`
