@@ -165,3 +165,30 @@ don't use `scanf` to read binary files.
 
 ## Virtual Memory
 
+`macros`  is just find and replace, so be careful.
+
+```c
+#define twice(x) 2*x
+twice(x+1) -> 2*x+1
+
+#define twice(x) 2*(x)
+twice(x+1) -> 2*(x+1)
+```
+
+`macros` done at pre-compile time, and `inline` done at compile time.
+
+`gcc`  treats `void *` pointer as same as `char *` pointer, but you've better not do arithmetic operation on `void  *` pointer.
+
+the `void *` pointer can't be dereferenced.
+
+when dereferencing a char pointer we get the first byte of that address.
+
+## Network Programming
+
+the internet is a network of networks (and the Internet is the biggest network of internet).
+
+the byte order of internet is **big endian** even though most of the machines in the world use little endian
+
+the mapping of the ip address and domain names are multi-multi.
+
+clients and servers are processed and not machines or hosts.

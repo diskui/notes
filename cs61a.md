@@ -21,8 +21,7 @@ words = {
 "agua": "water"
 }
 
->>> words.get("pavo", "something") #the key we are looking for doesn't exist, we got the second argument
-something
+>>> words.get("pavo", "something") # if the key we are looking for doesn't exist, we got the second argument something
 ```
 
 a key in the dictionary can't be a list or dictionary or any mutable other object, and they have to be distinct, but the value can be any type

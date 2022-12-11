@@ -9,7 +9,7 @@ don't do all the things within a function, which will make debuging more difficu
 
 the `static` notation before the inner nested classes will make it can't access the function and varibles outside of it.
 
-invariants: a condition that is guaranteed to be true during the code execution, uaually used to avoid special cases and to reason the code better.
+invariants: a condition that is guaranteed to be true during the code execution, usually used to avoid special cases and to reason the code better.
 
 types of parameterized classes :
 * Integer
@@ -52,7 +52,7 @@ use inheritance (extends and implements) only when there is a **is-a** relations
 
 the rules of java say that all constructors must start with a call to one of the super class's constructors.
 
-but if you don't, then java will do it automatically (no parameters one).
+but if you don't, then java will do it automatically (no parameter one).
 
 compiler allows assignments based on compile-time types.
 
