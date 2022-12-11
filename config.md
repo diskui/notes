@@ -30,3 +30,14 @@ plugins=(
 
 
 `chrome` 离线扩展：medium解锁
+
+config git:
+```shell
+git config --global user.name "linux"
+git config --global user.email kaxiford@gmail.com
+```
+
+generate an ssh key:
+```shell
+ssh-keygen -t ed25519 -C "kaxiford@gmail.com"
+```
