@@ -1,6 +1,18 @@
-softwares that I will install just after the installation of the linux system:
+things i will do after the installation of the linux system:
 
-to enable `neovim`  to copy to system clipboard, install `wl-clipboard`
+install some packages:
+
+```shell
+sudo pacman -S wl-clipboard bitwarden clash-for-windows-bin telegram-desktop firefox ranger	zathura zathura-pdf-mupdf foliate gnome ibus ibus-libpinyin spotify flameshot xdg-desktop-portal-gnome xdg-desktop-portal
+```
+
+some aur packages:
+
+```shell
+paru -S google-chrome visual-sdudio-code-bin jetbrains-toolbox typora 
+```
+
+
 
 `zsh` and `oh-my-zsh`, with some plugins: `git`, `zsh-autosuggestion`, `zsh-syntax-highlighting`, and `zsh-vi-mode`
 
@@ -16,9 +28,7 @@ git clone https://github.com/jeffreytse/zsh-vi-mode \
   $ZSH_CUSTOM/plugins/zsh-vi-mode
   
 # replace the configuration file
-```
 
-```shell
 plugins=(
 	git
 	zsh-autosuggestions
@@ -40,4 +50,6 @@ git config --global user.email kaxiford@gmail.com
 generate an ssh key:
 ```shell
 ssh-keygen -t ed25519 -C "kaxiford@gmail.com"
+
+#add to github
 ```
