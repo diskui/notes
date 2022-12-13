@@ -29,6 +29,9 @@ git clone https://github.com/jeffreytse/zsh-vi-mode \
   
 # replace the configuration file
 
+```
+```
+
 plugins=(
 	git
 	zsh-autosuggestions
