@@ -3,19 +3,19 @@ things i will do after the installation of the (arch-based) `linux` system:
 install gnome:
 
 ```shell
-sudo pacman -S gnome --needed
+pacman -S gnome --needed
 
-sudo systemctl enable gdm
+systemctl enable gdm
 ```
 
 add `archlinuxcn` source:
 
 ```shell
-sudo echo -e "[archlinuxcn]
+echo -e "[archlinuxcn]
 Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/\$arch" >> /etc/pacman.conf
-sudo pacman -Sy
-sudo pacman -S archlinuxcn-keyring
-sudo pacman -S paru
+pacman -Sy
+pacman -S archlinuxcn-keyring
+pacman -S paru
 ```
 
 configure the proxy:
@@ -30,10 +30,15 @@ install `zsh` and `oh-my-zsh`, with some plugins: `git`, `zsh-autosuggestion`, `
 
 ```bash
 # install zsh
-sudo pacman -S zsh --needed
+pacman -S zsh --needed
 
+#change to normal user
 # install oh my zsh
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+git clone https://github.com/ohmyzsh/ohmyzsh.git
+cd ohmyzsh/tools/
+./install.sh
+cd ../../
+sudo rm -rf ohmyzsh
 
 # install plugins
 git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git \
@@ -58,8 +63,8 @@ echo -e "plugins=(
 install some packages:
 
 ```shell
-sudo pacman -S wl-clipboard bitwarden clash-for-windows-bin telegram-desktop firefox \
-ranger zathura zathura-pdf-mupdf foliate gnome ibus ibus-libpinyin spotify\
+pacman -S wl-clipboard bitwarden telegram-desktop firefox \
+ranger zathura zathura-pdf-mupdf foliate  spotify\
 flameshot xdg-desktop-portal-gnome xdg-desktop-portal btop proxychains drawing --needed
 ```
 
