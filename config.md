@@ -15,6 +15,7 @@ sudo echo -e "[archlinuxcn]
 Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/\$arch" >> /etc/pacman.conf
 sudo pacman -Sy
 sudo pacman -S archlinuxcn-keyring
+sudo pacman -S paru
 ```
 
 configure the proxy:
@@ -57,13 +58,15 @@ echo -e "plugins=(
 install some packages:
 
 ```shell
-sudo pacman -S wl-clipboard bitwarden clash-for-windows-bin telegram-desktop firefox ranger	zathura zathura-pdf-mupdf foliate gnome ibus ibus-libpinyin spotify flameshot xdg-desktop-portal-gnome xdg-desktop-portal btop proxychains --needed
+sudo pacman -S wl-clipboard bitwarden clash-for-windows-bin telegram-desktop firefox \
+ranger zathura zathura-pdf-mupdf foliate gnome ibus ibus-libpinyin spotify\
+flameshot xdg-desktop-portal-gnome xdg-desktop-portal btop proxychains drawing --needed
 ```
 
 some `aur` packages:
 
 ```shell
-paru -S google-chrome visual-sdudio-code-bin jetbrains-toolbox typora 
+paru -S google-chrome visual-sdudio-code-bin jetbrains-toolbox typora
 ```
 
 configure git and generate an ssh key:
@@ -87,3 +90,11 @@ configure ibus:
  # add the input method and do the same in gnome settings
  # set the ctrl+space keyshortcut for switch input method as well the flameshot keyshortcut
 ```
+
+enable copying to clipboard of zathura:
+
+```shell
+mkdir ~/.config/zathura
+echo 'set selection-clipboard clipboard' >> ~/.config/zathura/zathurarc
+```
+

@@ -73,6 +73,7 @@ the checked and unchecked exception:
 you cannot import code from default package, so it's a bad idea to write classes in default package in a big project.
 
 four levels of access control of java:
+
 ![four levels of access control](https://s2.loli.net/2022/07/20/kw6juUMFQ9WOhGT.png)
 
 a class in the top level can only be public or no access modifier notation.
