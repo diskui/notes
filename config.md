@@ -3,9 +3,9 @@ things i will do after the installation of the (arch-based) `linux` system:
 install gnome:
 
 ```shell
-pacman -S gnome --needed
+pacman -S gnome sddm --needed
 
-systemctl enable gdm
+systemctl enable sddm
 ```
 
 add `archlinuxcn` source:
@@ -15,15 +15,18 @@ echo -e "[archlinuxcn]
 Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/\$arch" >> /etc/pacman.conf
 pacman -Sy
 pacman -S archlinuxcn-keyring
-pacman -S paru
+pacman -S yay
 ```
 
 configure the proxy:
 
 ```shell
 #install clash
-paru -S clash-for-windows-bin
+yay -S clash-for-windows-bin
 # or use the tar file temporarily
+echo "http_proxy=\"127.0.0.1:7890\"
+https_proxy=\"127.0.0.1:7890\"
+socks5_proxy=\"127.0.0.1:7890\"" >> /etc/envrionment
 ```
 
 install `zsh` and `oh-my-zsh`, with some plugins: `git`, `zsh-autosuggestion`, `zsh-syntax-highlighting`, and `zsh-vi-mode`
@@ -71,7 +74,7 @@ flameshot xdg-desktop-portal-gnome xdg-desktop-portal btop proxychains drawing -
 some `aur` packages:
 
 ```shell
-paru -S google-chrome visual-sdudio-code-bin jetbrains-toolbox typora
+yay -S google-chrome visual-studio-code-bin jetbrains-toolbox typora --needed
 ```
 
 configure git and generate an ssh key:
@@ -84,11 +87,11 @@ ssh-keygen -t ed25519 -C "kaxiford@gmail.com"
 #add to github
 ```
 
-configure ibus:
+install and configure ibus:
 
 ```shell
  # set the environment varibles
- sudo echo -e "GTK_IM_MODULE=ibus
+ echo -e "GTK_IM_MODULE=ibus
  XMODIFIERS=@im=ibus
  QT_IM_MODULE=ibus" >> /etc/envrionment
  
@@ -96,6 +99,17 @@ configure ibus:
  # add the input method and do the same in gnome settings
  # set the ctrl+space keyshortcut for switch input method as well the flameshot keyshortcut
 ```
+
+or use fcitx5:
+
+```shell
+pacman -S fcitx5-im fcitx5-chinese-addons fcitx5-pinyin-zhwiki fcitx5-nord
+yay -S fcitx5-input-support
+
+# set audo-start
+```
+
+
 
 enable copying to clipboard of zathura:
 
