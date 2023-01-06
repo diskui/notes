@@ -73,6 +73,7 @@ configure git and generate an ssh key:
 ```shell
 git config --global user.name "linux"
 git config --global user.email kaxiford@gmail.com
+git config --global core.editor "nvim"
 ssh-keygen -t ed25519 -C "kaxiford@gmail.com"
 
 #add to github
