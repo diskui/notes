@@ -3,14 +3,15 @@ things i will do after the installation of the (arch-based) `linux` system:
 install gnome:
 
 ```shell
-pacman -S gnome sddm --needed
+sudo pacman -S gnome sddm --needed
 
-systemctl enable sddm
+sudo systemctl enable sddm
 ```
 
 add `archlinuxcn` source:
 
 ```shell
+su root
 echo -e "[archlinuxcn]
 Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/\$arch" >> /etc/pacman.conf
 pacman -Sy
@@ -24,22 +25,26 @@ configure the proxy:
 #install clash
 yay -S clash-for-windows-bin
 # or use the tar file temporarily
+su root
+# add a blank line
+echo >> /etc/environment
 echo "http_proxy=\"127.0.0.1:7890\"
 https_proxy=\"127.0.0.1:7890\"
-socks5_proxy=\"127.0.0.1:7890\"" >> /etc/envrionment
+socks5_proxy=\"127.0.0.1:7890\"" >> /etc/environment
 ```
 
 install `zsh` and `oh-my-zsh`, with some plugins: `git`, `zsh-autosuggestion`, `zsh-syntax-highlighting`, and `zsh-vi-mode`
 
 ```bash
 # install zsh
-pacman -S zsh --needed
+sudo pacman -S zsh --needed
 
-#change to normal user
 # install oh my zsh
 git clone https://github.com/ohmyzsh/ohmyzsh.git
 cd ohmyzsh/tools/
 ./install.sh
+
+
 cd ../../
 sudo rm -rf ohmyzsh
 
@@ -66,9 +71,9 @@ echo -e "plugins=(
 install some packages:
 
 ```shell
-pacman -S wl-clipboard bitwarden telegram-desktop firefox \
-ranger zathura zathura-pdf-mupdf foliate  spotify\
-flameshot xdg-desktop-portal-gnome xdg-desktop-portal btop proxychains drawing --needed
+sudo pacman -S wl-clipboard bitwarden telegram-desktop firefox \
+ranger zathura zathura-pdf-mupdf foliate  spotify \
+flameshot xdg-desktop-portal btop proxychains drawing neovim --needed
 ```
 
 some `aur` packages:
@@ -103,13 +108,11 @@ install and configure ibus:
 or use fcitx5:
 
 ```shell
-pacman -S fcitx5-im fcitx5-chinese-addons fcitx5-pinyin-zhwiki fcitx5-nord
+sudo pacman -S fcitx5-im fcitx5-chinese-addons fcitx5-pinyin-zhwiki fcitx5-nord
 yay -S fcitx5-input-support
 
 # set audo-start
 ```
-
-
 
 enable copying to clipboard of zathura:
 
